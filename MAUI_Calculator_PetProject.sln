@@ -5,6 +5,12 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MAUI_Calculator_PetProject", "MAUI_Calculator_PetProject\MAUI_Calculator_PetProject.csproj", "{CAEE9748-404F-4BA1-B951-780FBD4DED15}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculation_TestConsoleApp", "Calculation_TestConsoleApp\Calculation_TestConsoleApp.csproj", "{8FDBAFF3-F65E-430D-B340-FB4E188F69E4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculus_Library", "Calculus_Library\Calculus_Library.csproj", "{C27CEA9E-6256-41B5-BC1C-26C1C72CFA61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculus_Tests", "Calculus_Tests\Calculus_Tests.csproj", "{B68DB7F1-8822-423A-9623-2FAFA21E2A57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +23,18 @@ Global
 		{CAEE9748-404F-4BA1-B951-780FBD4DED15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAEE9748-404F-4BA1-B951-780FBD4DED15}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CAEE9748-404F-4BA1-B951-780FBD4DED15}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8FDBAFF3-F65E-430D-B340-FB4E188F69E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FDBAFF3-F65E-430D-B340-FB4E188F69E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FDBAFF3-F65E-430D-B340-FB4E188F69E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FDBAFF3-F65E-430D-B340-FB4E188F69E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C27CEA9E-6256-41B5-BC1C-26C1C72CFA61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C27CEA9E-6256-41B5-BC1C-26C1C72CFA61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C27CEA9E-6256-41B5-BC1C-26C1C72CFA61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C27CEA9E-6256-41B5-BC1C-26C1C72CFA61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B68DB7F1-8822-423A-9623-2FAFA21E2A57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B68DB7F1-8822-423A-9623-2FAFA21E2A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B68DB7F1-8822-423A-9623-2FAFA21E2A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B68DB7F1-8822-423A-9623-2FAFA21E2A57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
