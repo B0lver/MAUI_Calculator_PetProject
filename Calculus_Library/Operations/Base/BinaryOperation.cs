@@ -1,26 +1,29 @@
 ﻿using Calculus_Library.Interfaces;
-using System.Numerics;
+using Calculus_Library.Interfaces.Extensions;
+using Calculus_Library.Operations.DefaultExtensionsClasses;
 
 namespace Calculus_Library.Operations.Base
 {
-    public abstract class BinaryOperation<T> : IValue<T>, ICalculusOperation<T> where T : INumber<T>
+    public abstract class BinaryOperation : IValue, ICalculusOperation
     {
-        protected IValue<T> a_value;
-        protected IValue<T> b_value;
-
-        public BinaryOperation(IValue<T> a, IValue<T> b)
+        public IValue AValue { get; }
+        public IValue BValue { get; }
+        public IBinaryExtension Extension { get; }
+        public BinaryOperation(IValue a, IValue b, IBinaryExtension extension = null)
         {
-            a_value = a;
-            b_value = b;
+            AValue = a;
+            BValue = b;
+            Extension = extension ?? new DefaultBinaryExtension();
         }
         public bool CanGetResult()
         {
             return true;
         }
-        public abstract T Execute();
+        public abstract dynamic Execute();
 
-        public T GetValue()
+        public dynamic GetValue()
         {
+
             return Execute();
         }
     }

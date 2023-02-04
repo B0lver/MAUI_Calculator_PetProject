@@ -2,17 +2,17 @@
 
 namespace Calculus_Library.Operations.Base
 {
-    public class BaseValue<T> : IValue<T>
+    public class BaseValue : IValue
     {
-        private readonly T result_value;
-        public BaseValue(T result_value)
+        public dynamic ResultValue { get; }
+        public BaseValue(dynamic result_value)
         {
-            this.result_value = result_value;
+            this.ResultValue = result_value;
         }
 
-        public T GetValue()
+        public dynamic GetValue()
         {
-            return result_value;
+            return ResultValue;
         }
     }
 }

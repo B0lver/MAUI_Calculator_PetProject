@@ -1,21 +1,27 @@
 ﻿using Calculus_Library.Interfaces;
-using System.Numerics;
+using Calculus_Library.Interfaces.Extensions;
+using Calculus_Library.Operations.DefaultExtensionsClasses;
 
 namespace Calculus_Library.Operations.Base
 {
-    public abstract class UnaryOperation<T> : IValue<T>, ICalculusOperation<T> where T : INumber<T>
+    public abstract class UnaryOperation : IValue, ICalculusOperation
     {
-        protected IValue<T> a_value;
-        protected T result_value;
+        public IValue AValue { get; }
+        public IUnaryExtension UnaryExtension { get; }
+        public UnaryOperation(IValue a, IUnaryExtension extension = null)
+        {
+            this.AValue = a;
+            this.UnaryExtension = extension ?? new DefaultUnaryExtension();
+        }
         public bool CanGetResult()
         {
             return true;
         }
-        public abstract T Execute();
+        public abstract dynamic Execute();
 
-        public T GetValue()
+        public dynamic GetValue()
         {
-            return result_value;
+            return Execute();
         }
     }
 }
