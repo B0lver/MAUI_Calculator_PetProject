@@ -2,9 +2,9 @@
 
 namespace Calculus_Library.Interfaces
 {
-    public interface ICalculusOperation<T> where T : INumber<T>
+    public interface ICalculusOperation
     {
-        T Execute();
+        dynamic Execute();
         bool CanGetResult();
     }
 }

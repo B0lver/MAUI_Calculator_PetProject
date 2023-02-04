@@ -1,7 +1,9 @@
-﻿namespace Calculus_Library.Interfaces
+﻿using Calculus_Library.Operations.Base;
+
+namespace Calculus_Library.Interfaces
 {
-    public interface IValue<T>
+    public interface IValue
     {
-        T GetValue();
+        dynamic GetValue();
     }
 }
