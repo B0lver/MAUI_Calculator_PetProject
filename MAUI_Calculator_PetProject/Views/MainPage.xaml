@@ -3,6 +3,7 @@
     x:Class="MAUI_Calculator_PetProject.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:temp="clr-namespace:Calculus_Maui_Controls.Components;assembly=Calculus_Maui_Controls"
     xmlns:viewmodel="clr-namespace:MAUI_Calculator_PetProject.ViewModels"
     x:DataType="viewmodel:MainPageViewModel">
     <ScrollView>
@@ -10,18 +11,24 @@
             Padding="30,0"
             Spacing="25"
             VerticalOptions="Center">
-            <Entry
-                Placeholder="{StaticResource FirstName Label}"
-                Text="{Binding FirstName}" />
-            <Entry
-                Placeholder="{StaticResource LastName Label}"
-                Text="{Binding LastName}" />
-            <Label
-                Text="{Binding FullName}"
-                TextColor="{StaticResource Primary}" />
-            <Button
-                Command="{Binding SubmitCommand}"
-                Text="{StaticResource Send Button Label}" />
+
+            <temp:CommonOperationView BindingContext="{Binding FinalOperation}" />
+            <temp:CommonOperationView BindingContext="{Binding Result}" />
+
+            <VerticalStackLayout IsVisible="False">
+                <Entry
+                    Placeholder="{StaticResource FirstName Label}"
+                    Text="{Binding FirstName}" />
+                <Entry
+                    Placeholder="{StaticResource LastName Label}"
+                    Text="{Binding LastName}" />
+                <Label
+                    Text="{Binding FullName}"
+                    TextColor="{StaticResource Primary}" />
+                <Button
+                    Command="{Binding SubmitCommand}"
+                    Text="{StaticResource Send Button Label}" />
+            </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
