@@ -3,13 +3,13 @@ using Calculus_Library.Operations.BasicMath;
 
 namespace Calculus_Tests.BasicMath
 {
-    public class Sum
+    public class Plus_tests
     {
         [Fact]
         public void IntegerSum()
         {
             //Arrange
-            Plus<int> operation = new(new BaseValue<int>(1), new BaseValue<int>(2));
+            Plus operation = new(new BaseValue(1), new BaseValue(2));
             //Act
             var res = operation.GetValue();
             //Assert
@@ -20,7 +20,7 @@ namespace Calculus_Tests.BasicMath
         public void DoubleSum()
         {
             //Arrange
-            Plus<double> operation = new(new BaseValue<double>(1.78), new BaseValue<double>(2.34));
+            Plus operation = new(new BaseValue(1.78), new BaseValue(2.34));
             //Act
             var res = operation.GetValue();
             //Assert
@@ -31,8 +31,8 @@ namespace Calculus_Tests.BasicMath
         public void SumsCascade_AsFirstArg() 
         {
             //Arrange
-            Plus<int> operation1 = new(new BaseValue<int>(2), new BaseValue<int>(5));
-            Plus<int> operation2 = new(operation1, new BaseValue<int>(4));
+            Plus operation1 = new(new BaseValue(2), new BaseValue(5));
+            Plus operation2 = new(operation1, new BaseValue(4));
             //Act
             var res = operation2.GetValue();
             //Assert
@@ -43,8 +43,8 @@ namespace Calculus_Tests.BasicMath
         public void SumsCascade_AsSecondArg()
         {
             //Arrange
-            Plus<int> operation1 = new(new BaseValue<int>(5), new BaseValue<int>(1));
-            Plus<int> operation2 = new(new BaseValue<int>(9), operation1);
+            Plus operation1 = new(new BaseValue(5), new BaseValue(1));
+            Plus operation2 = new(new BaseValue(9), operation1);
             //Act
             var res = operation2.GetValue();
             //Assert
@@ -55,9 +55,9 @@ namespace Calculus_Tests.BasicMath
         public void SumsCascade_AsBoth()
         {
             //Arrange
-            Plus<int> operation1 = new(new BaseValue<int>(2), new BaseValue<int>(4));
-            Plus<int> operation2 = new(new BaseValue<int>(1), new BaseValue<int>(9));
-            Plus<int> operation3 = new(operation1, operation2);
+            Plus operation1 = new(new BaseValue(2), new BaseValue(4));
+            Plus operation2 = new(new BaseValue(1), new BaseValue(9));
+            Plus operation3 = new(operation1, operation2);
             //Act
             var res = operation3.GetValue();
             //Assert
@@ -68,7 +68,7 @@ namespace Calculus_Tests.BasicMath
         public void SumsCascade_FirstArgNegative()
         {
             //Arrange
-            Plus<int> operation = new(new BaseValue<int>(-4), new BaseValue<int>(2));
+            Plus operation = new(new BaseValue(-4), new BaseValue(2));
             //Act
             var res = operation.GetValue();
             //Assert
@@ -79,7 +79,7 @@ namespace Calculus_Tests.BasicMath
         public void SumsCascade_SecondArgNegative()
         {
             //Arrange
-            Plus<int> operation = new(new BaseValue<int>(7), new BaseValue<int>(-9));
+            Plus operation = new(new BaseValue(7), new BaseValue(-9));
             //Act
             var res = operation.GetValue();
             //Assert
@@ -90,7 +90,7 @@ namespace Calculus_Tests.BasicMath
         public void SumsCascade_BothArgsNegative()
         {
             //Arrange
-            Plus<int> operation = new(new BaseValue<int>(-8), new BaseValue<int>(-29));
+            Plus operation = new(new BaseValue(-8), new BaseValue(-29));
             //Act
             var res = operation.GetValue();
             //Assert
