@@ -1,17 +1,18 @@
 ﻿using Calculus_Library.Interfaces;
+using Calculus_Library.Interfaces.Extensions;
 using Calculus_Library.Operations.Base;
-using System.Numerics;
 
 namespace Calculus_Library.Operations.BasicMath
 {
-    public class Plus<T> : BinaryOperation<T> where T : INumber<T>
+    public sealed class Plus : BinaryOperation
     {
-        public Plus(IValue<T> a, IValue<T> b) : base(a, b)
+        public Plus(IValue a, IValue b, IBinaryExtension extension = null) : base(a, b, extension)
         {
         }
-        public override T Execute()
+
+        public override dynamic Execute()
         {
-            return a_value.GetValue() + b_value.GetValue();
+            return AValue.GetValue() + BValue.GetValue();
         }
     }
 }

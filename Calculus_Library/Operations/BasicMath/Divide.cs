@@ -4,15 +4,15 @@ using Calculus_Library.Operations.Base;
 
 namespace Calculus_Library.Operations.BasicMath
 {
-    public sealed class Multiply : BinaryOperation
+    public sealed class Divide : BinaryOperation
     {
-        public Multiply(IValue a, IValue b, IBinaryExtension extension = null) : base(a, b, extension)
+        public Divide(IValue a, IValue b, IBinaryExtension extension = null) : base(a, b, extension)
         {
         }
 
         public override dynamic Execute()
         {
-            return AValue.GetValue() * BValue.GetValue();
+            return  (double)AValue.GetValue() / (double)BValue.GetValue();
         }
     }
 }
